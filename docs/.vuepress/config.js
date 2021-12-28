@@ -3,6 +3,7 @@ const { config } = require("vuepress-theme-hope");
 module.exports = config({
   title: "随心日记",
   description: "pkloving's blog",
+  base: '/blog',
   dest: "./dist",
 
   head: [
