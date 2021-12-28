@@ -1,9 +1,8 @@
 const { config } = require("vuepress-theme-hope");
 
 module.exports = config({
-  title: "Theme Demo",
-  description: "A demo for vuepress-theme-hope",
-
+  title: "随心日记",
+  description: "pkloving's blog",
   dest: "./dist",
 
   head: [
