@@ -2,8 +2,8 @@
   <div id="container"></div>
 </template>
 <script setup lang="ts">
-import p5 from 'p5'
 import { onMounted } from 'vue';
+const p5Module = () => import('p5')
 let count = 0
 const sketch = (s:any) => {
   s.setup = () => {
@@ -17,5 +17,8 @@ const sketch = (s:any) => {
     count += 0.1
   }
 }
-onMounted(() => new p5(sketch, 'container'))
+onMounted(async () => {
+  const p5 = (await p5Module()).default
+  new p5(sketch, 'container')
+})
 </script>
